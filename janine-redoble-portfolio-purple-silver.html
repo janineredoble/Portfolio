@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janine Valerie Redoble | Information Security Portfolio</title>
+  <meta name="description" content="Cybersecurity portfolio of Janine Valerie Redoble, Information Security Analyst, SOC Analyst, and Network Security professional." />
+
+  <style>
+    :root {
+      --black: #0b0b10;
+      --ink: #16161d;
+      --deep-purple: #4c1d95;
+      --purple: #7c3aed;
+      --soft-purple: #ede9fe;
+      --silver: #c0c0c8;
+      --light-silver: #f3f4f6;
+      --white: #ffffff;
+      --muted: #5f6472;
+      --border: #d4d4dc;
+      --card: #ffffff;
+      --shadow: 0 18px 45px rgba(22, 22, 29, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        linear-gradient(120deg, rgba(124, 58, 237, 0.06), transparent 30%),
+        linear-gradient(280deg, rgba(192, 192, 200, 0.25), transparent 28%),
+        var(--white);
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--deep-purple);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .logo {
+      font-family: "Courier New", monospace;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: 0.4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 88px 0 64px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 7px 12px;
+      border: 1px solid var(--purple);
+      border-radius: 999px;
+      background: var(--soft-purple);
+      color: var(--deep-purple);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 66px);
+      line-height: 1.05;
+      margin-bottom: 16px;
+      color: var(--black);
+      letter-spacing: -1.2px;
+    }
+
+    h2 {
+      font-size: 31px;
+      margin-bottom: 16px;
+      color: var(--black);
+      letter-spacing: -0.5px;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+
+    .subtitle {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 19px;
+      color: var(--deep-purple);
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero p,
+    .section-intro,
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .hero p {
+      max-width: 780px;
+      font-size: 17px;
+    }
+
+    .hero-card {
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.95), rgba(243,244,246,0.95));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      right: -45px;
+      top: -45px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgba(124, 58, 237, 0.12);
+    }
+
+    .hero-card h3 {
+      position: relative;
+    }
+
+    .hero-card ul {
+      list-style: none;
+      margin-top: 14px;
+      position: relative;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .hero-card li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(95, 100, 114, 0.16);
+    }
+
+    .hero-card li:last-child {
+      border-bottom: none;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid var(--deep-purple);
+    }
+
+    .btn-primary {
+      background: var(--deep-purple);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      color: var(--deep-purple);
+      background: var(--white);
+    }
+
+    section {
+      padding: 58px 0;
+      border-bottom: 1px solid rgba(212, 212, 220, 0.8);
+    }
+
+    .section-intro {
+      max-width: 840px;
+      margin-bottom: 28px;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(22, 22, 29, 0.06);
+    }
+
+    .card h3 {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      background: var(--soft-purple);
+      color: var(--deep-purple);
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .job-title {
+      color: var(--black);
+      font-weight: 800;
+      font-size: 19px;
+    }
+
+    .job-meta {
+      color: var(--deep-purple);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .case-study {
+      display: grid;
+      gap: 12px;
+    }
+
+    .case-study strong {
+      color: var(--black);
+    }
+
+    .role-label {
+      color: var(--deep-purple);
+      font-family: "Courier New", monospace;
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .note {
+      border-left: 5px solid var(--purple);
+      padding: 18px;
+      background: linear-gradient(90deg, var(--soft-purple), var(--white));
+      border-radius: 14px;
+      color: var(--muted);
+    }
+
+    .code-strip {
+      font-family: "Courier New", monospace;
+      background: var(--black);
+      color: var(--silver);
+      border-radius: 16px;
+      padding: 18px;
+      overflow-x: auto;
+      margin-top: 20px;
+      border: 1px solid #2f2f3a;
+    }
+
+    .code-strip span {
+      color: #c4b5fd;
+    }
+
+    .contact-box {
+      background: linear-gradient(145deg, var(--black), #171720);
+      border: 1px solid #2f2f3a;
+      border-radius: 22px;
+      padding: 32px;
+      text-align: center;
+      color: var(--light-silver);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box h2 {
+      color: var(--white);
+    }
+
+    .contact-box p {
+      color: var(--silver);
+    }
+
+    .contact-box a {
+      color: #c4b5fd;
+    }
+
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      background: var(--white);
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">JVR.sec</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Case Studies</a>
+          <a href="#experience">Experience</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Analytical · Bookish · Technical</span>
+          <h1>Janine Valerie Redoble</h1>
+          <p class="subtitle">Information Security Analyst | SOC Analyst | Network Security</p>
+          <p>
+            Security+ and CCNA-certified Information Security Analyst with experience in SOC monitoring,
+            incident response, endpoint investigation, security policy enforcement, and network security operations.
+            I combine a detail-oriented investigation mindset with a strong network operations foundation and continuous
+            learning in cyber defense, threat hunting, PowerShell endpoint triage, CrowdStrike CQL, and Real Time Response.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#projects">View Case Studies</a>
+            <a class="btn btn-outline" href="#contact">Contact Me</a>
+            <a class="btn btn-outline" href="assets/janine-redoble-resume.pdf">Download Resume</a>
+          </div>
+
+          <div class="code-strip">
+            <span>&gt;</span> focus = ["incident response", "endpoint investigation", "network security", "policy enforcement"]<br>
+            <span>&gt;</span> mindset = "evidence-based, structured, continuously improving"
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h3>Security Focus</h3>
+          <ul>
+            <li>Incident Response Lifecycle Ownership</li>
+            <li>EDR, SOC, and Endpoint Investigation</li>
+            <li>Malware, LOTL, and Defense Evasion Triage</li>
+            <li>Acceptable Use Policy Investigation</li>
+            <li>Armis Dashboards and Asset Visibility</li>
+            <li>Network Security Operations</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p class="section-intro">
+          I am an Information Security Analyst with a background in Network Operations Center engineering.
+          My work combines structured analysis, careful documentation, endpoint security investigation, user behavior review,
+          incident response coordination, and network security support. I enjoy learning deeply, building clear workflows,
+          and translating security findings into practical actions.
+        </p>
+
+        <div class="note">
+          Portfolio note: all case studies are simulated or sanitized. No company-sensitive alerts, screenshots,
+          hostnames, IP addresses, usernames, internal domains, policies, configurations, or confidential incident details are shared.
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <p class="section-intro">
+          Practical skills grouped by investigation, engineering support, and network security use cases.
+        </p>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Security Platforms</h3>
+            <p>CrowdStrike Falcon, Bitdefender GravityZone EDR, Armis Centrix, Armis VIPR Pro, Netskope SASE, Varonis Data Security, Halcyon Anti-Ransomware.</p>
+          </div>
+
+          <div class="card">
+            <h3>SOC / EDR Investigation</h3>
+            <p>Alert triage, incident validation, malware investigation, ransomware-related alert handling, defense evasion, Living-off-the-Land activity, suspicious process review, IOC validation.</p>
+          </div>
+
+          <div class="card">
+            <h3>Scripting and Querying</h3>
+            <p>PowerShell fundamentals, CrowdStrike Query Language basics, Bash basics, endpoint triage commands, SHA256 hash checking, certificate review, process review, event log checking.</p>
+          </div>
+
+          <div class="card">
+            <h3>Threat Intelligence and OSINT</h3>
+            <p>VirusTotal, ANY.RUN, Shodan, Maltego, Whois, AbuseIPDB, PeeringDB, IOC enrichment, IP reputation review.</p>
+          </div>
+
+          <div class="card">
+            <h3>Network Security</h3>
+            <p>Cisco, Juniper, Arista, Huawei, FortiGate, NSFOCUS DDoS Protection, VLAN, ACL, BGP, OSPF, EIGRP, STP, MPLS, L2VPN.</p>
+          </div>
+
+          <div class="card">
+            <h3>Security Operations</h3>
+            <p>Incident response lifecycle, playbook updates, security documentation, DNS allowlist/blocklist maintenance, approved exclusions, minor security tool policy adjustments, AI-related alert handling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Portfolio Case Studies</h2>
+        <p class="section-intro">
+          Role-targeted, safe case studies that demonstrate investigation, documentation, security operations,
+          engineering support, and network security thinking.
+        </p>
+
+        <div class="grid grid-2">
+          <article class="card case-study">
+            <div class="role-label">Information Security Analyst</div>
+            <h3>Acceptable Use Policy Violation Investigation</h3>
+            <p><strong>Scenario:</strong> Simulated user activity triggered a potential acceptable use policy violation.</p>
+            <p><strong>Objective:</strong> Review user behavior, document findings, classify risk, and prepare an escalation summary.</p>
+            <ul>
+              <li>Reviewed user activity, timestamps, and policy context.</li>
+              <li>Collected relevant evidence using a sanitized investigation checklist.</li>
+              <li>Documented the incident summary, impact, and recommended action.</li>
+              <li>Prepared a stakeholder-ready report for IT and HR coordination.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Policy Investigation</span>
+              <span class="tag">Documentation</span>
+              <span class="tag">HR/IT Coordination</span>
+            </div>
+          </article>
+
+          <article class="card case-study">
+            <div class="role-label">SOC Analyst</div>
+            <h3>Malware and LOTL Alert Triage</h3>
+            <p><strong>Scenario:</strong> Simulated endpoint alert involving suspicious script execution and possible Living-off-the-Land behavior.</p>
+            <p><strong>Objective:</strong> Validate whether the activity is malicious, suspicious, or a false positive.</p>
+            <ul>
+              <li>Reviewed process tree, command-line activity, file path, and user context.</li>
+              <li>Checked SHA256 hash and digital certificate details.</li>
+              <li>Mapped observed behavior to MITRE ATT&CK concepts.</li>
+              <li>Recommended escalation, containment, or closure based on evidence.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">EDR Triage</span>
+              <span class="tag">Malware</span>
+              <span class="tag">LOTL</span>
+              <span class="tag">MITRE ATT&CK</span>
+            </div>
+          </article>
+
+          <article class="card case-study">
+            <div class="role-label">InfoSec Engineer</div>
+            <h3>Security Tool Exclusion Review Workflow</h3>
+            <p><strong>Scenario:</strong> Simulated request for a security tool exclusion due to recurring false-positive alerts.</p>
+            <p><strong>Objective:</strong> Balance business continuity with security risk before applying an approved exclusion.</p>
+            <ul>
+              <li>Validated business justification and affected asset or application.</li>
+              <li>Reviewed false-positive behavior and possible security impact.</li>
+              <li>Defined approval requirements and review schedule.</li>
+              <li>Documented change details and post-change validation steps.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Exclusion Review</span>
+              <span class="tag">Risk Validation</span>
+              <span class="tag">Policy Tuning</span>
+            </div>
+          </article>
+
+          <article class="card case-study">
+            <div class="role-label">Cybersecurity Engineer</div>
+            <h3>Armis Security Dashboard Concept</h3>
+            <p><strong>Scenario:</strong> Designed a monitoring concept for high-risk, suspicious, unmanaged, and potentially malicious assets.</p>
+            <p><strong>Objective:</strong> Improve visibility and response prioritization for security investigations.</p>
+            <ul>
+              <li>Tracked suspicious and malicious asset activity.</li>
+              <li>Highlighted unmanaged or unknown devices.</li>
+              <li>Identified legacy systems requiring scheduled manual scans.</li>
+              <li>Prioritized high-risk assets requiring review or escalation.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Armis</span>
+              <span class="tag">Asset Visibility</span>
+              <span class="tag">Dashboarding</span>
+            </div>
+          </article>
+
+          <article class="card case-study">
+            <div class="role-label">Network Security Engineer</div>
+            <h3>Malicious IP Blocking Workflow</h3>
+            <p><strong>Scenario:</strong> Simulated suspicious IP address requiring validation before block recommendation.</p>
+            <p><strong>Objective:</strong> Use OSINT and threat intelligence to support network security decisions.</p>
+            <ul>
+              <li>Checked IP reputation using AbuseIPDB, Whois, and Shodan.</li>
+              <li>Reviewed business impact and possible false-positive risk.</li>
+              <li>Prepared block recommendation for firewall, DNS, or security platform action.</li>
+              <li>Documented findings for audit and operational tracking.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Threat Intel</span>
+              <span class="tag">Network Security</span>
+              <span class="tag">IP Blocking</span>
+            </div>
+          </article>
+
+          <article class="card case-study">
+            <div class="role-label">Network Security Engineer</div>
+            <h3>VLAN Migration Security Validation</h3>
+            <p><strong>Scenario:</strong> Created a validation checklist for a network segmentation or VLAN migration activity.</p>
+            <p><strong>Objective:</strong> Ensure segmentation, connectivity, access control, and monitoring are properly reviewed.</p>
+            <ul>
+              <li>Validated VLANs, subnets, and routing behavior.</li>
+              <li>Reviewed ACL and access control expectations.</li>
+              <li>Prepared connectivity, rollback, and post-change checks.</li>
+              <li>Documented monitoring steps after implementation.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">VLAN</span>
+              <span class="tag">Segmentation</span>
+              <span class="tag">Change Validation</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2>Professional Experience</h2>
+
+        <div class="timeline">
+          <div class="card">
+            <div class="job-title">Information Security Analyst</div>
+            <div class="job-meta">Allegro Microsystems Philippines Inc. | March 2025 – Present</div>
+            <ul>
+              <li>Own and execute the incident response lifecycle, including playbook creation and updates, alert identification, investigation, containment, eradication, recovery validation, documentation, and lessons learned.</li>
+              <li>Monitor, triage, and investigate alerts across endpoint, user behavior, network, data security, anti-ransomware, and AI-related security monitoring platforms.</li>
+              <li>Investigate incidents involving abnormal login activity, suspicious file access, privilege escalation attempts, malware indicators, ransomware-related alerts, defense evasion, Living-off-the-Land activity, AI-related policy alerts, and cybersecurity policy violations.</li>
+              <li>Perform endpoint and security alert validation by reviewing file hashes, digital certificates, suspicious processes, command-line activity, host context, user activity, and related security telemetry.</li>
+              <li>Investigate acceptable use policy violations and risky user behavior; document findings and coordinate with HR, IT, and relevant stakeholders for awareness, escalation, and corrective action.</li>
+              <li>Create and maintain Armis dashboards to monitor suspicious, malicious, unmanaged, and high-risk asset activity for improved investigation visibility and response prioritization.</li>
+              <li>Support security operations projects, including backup enforcement, scheduled manual scanning for legacy systems, MDM initiatives, DNS allowlist/blocklist maintenance, approved security tool exclusions, and minor security policy adjustments.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="job-title">Network Operations Center Engineer Associate</div>
+            <div class="job-meta">Total Information Management Inc. | July 2023 – March 2025</div>
+            <ul>
+              <li>Monitored network availability, performance, and health using Zabbix, SolarWinds, Ping, Traceroute, and related troubleshooting tools.</li>
+              <li>Supported network operations, troubleshooting, configuration control, and change validation for Cisco, Arista, Huawei, and Juniper devices.</li>
+              <li>Investigated connectivity issues, latency, packet loss, routing concerns, service availability problems, and other network incidents.</li>
+              <li>Documented incidents, performed root cause analysis, prepared reports, and supported escalation and resolution tracking.</li>
+              <li>Coordinated with SOC and infrastructure teams on network security actions, including malicious IP blocking and port security enforcement.</li>
+              <li>Assisted in switch proof-of-concept testing, traffic simulations, bandwidth analysis, and infrastructure performance validation.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="job-title">Career Transition — Network Engineering</div>
+            <div class="job-meta">September 2022 – July 2023</div>
+            <ul>
+              <li>Completed CCNA certification and hands-on networking labs focused on routing, switching, subnetting, VLANs, and troubleshooting.</li>
+              <li>Built a strong network engineering foundation that supported transition into NOC operations and cybersecurity roles.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="job-title">Purchasing / Administrative Roles</div>
+            <div class="job-meta">Nagatsu Sanpla / Atlantic Grains Inc. | August 2019 – September 2022</div>
+            <ul>
+              <li>Managed vendor coordination, procurement processes, timely delivery tracking, audit support, and compliance documentation to improve operational efficiency.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="container">
+        <h2>Certifications & Training</h2>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Certifications</h3>
+            <ul>
+              <li>CompTIA Security+</li>
+              <li>Cisco Certified Network Associate — CCNA</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Training</h3>
+            <ul>
+              <li>GuideM Cyber Defense & Threat Hunting Bootcamp — training completed; certification exam pending schedule</li>
+              <li>TryHackMe Security Engineer Learning Path</li>
+              <li>Platform Training: CrowdStrike, Armis Centrix Foundations & Power User, Netskope, Varonis</li>
+              <li>Continuous learning: cyber defense, threat hunting, AI security monitoring, CrowdStrike CQL, PowerShell endpoint triage, and RTR workflows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:redoblevalerie@gmail.com">redoblevalerie@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/janine-valerie-r-5931b5112" target="_blank" rel="noopener">linkedin.com/in/janine-valerie-r-5931b5112</a></p>
+          <p>Location: Santa Rosa, Laguna, Philippines</p>
+          <p style="margin-top: 14px;">
+            Open to Information Security Analyst, SOC Analyst, Cybersecurity Engineer,
+            Information Security Engineer, and Network Security Engineer opportunities.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Janine Valerie Redoble. Analytical, bookish, technical, and security-focused.
+    </div>
+  </footer>
+</body>
+</html>
