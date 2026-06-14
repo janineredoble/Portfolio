@@ -37,6 +37,7 @@
         var(--white);
       color: var(--ink);
       line-height: 1.65;
+      overflow-x: hidden;
     }
 
     a {
@@ -97,6 +98,10 @@
       align-items: center;
     }
 
+    .hero-grid > * {
+      min-width: 0;
+    }
+
     .eyebrow {
       display: inline-flex;
       gap: 8px;
@@ -117,14 +122,14 @@
       line-height: 1.05;
       margin-bottom: 16px;
       color: var(--black);
-      letter-spacing: -1.2px;
+      letter-spacing: 0;
     }
 
     h2 {
       font-size: 31px;
       margin-bottom: 16px;
       color: var(--black);
-      letter-spacing: -0.5px;
+      letter-spacing: 0;
     }
 
     h3 {
@@ -389,6 +394,51 @@
       .nav-links {
         gap: 12px;
       }
+
+      .hero {
+        padding: 56px 0 44px;
+      }
+
+      .eyebrow {
+        display: flex;
+        width: fit-content;
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.35;
+      }
+
+      h1 {
+        font-size: 42px;
+        overflow-wrap: anywhere;
+      }
+
+      .subtitle {
+        font-size: 17px;
+      }
+
+      .code-strip {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: min(100% - 32px, 1120px);
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .btn {
+        padding: 11px 16px;
+      }
+
+      .card,
+      .hero-card,
+      .contact-box {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -404,6 +454,7 @@
           <a href="#projects">Case Studies</a>
           <a href="#experience">Experience</a>
           <a href="#certifications">Certifications</a>
+          <a href="#education">Education</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -414,14 +465,14 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <span class="eyebrow">Analytical · Bookish · Technical</span>
+          <span class="eyebrow">Security Monitoring | Incident Investigation | Network Defense</span>
           <h1>Janine Valerie Redoble</h1>
           <p class="subtitle">Information Security Analyst | SOC Analyst | Network Security</p>
           <p>
-            Security+ and CCNA-certified Information Security Analyst with experience in SOC monitoring,
-            incident response, endpoint investigation, security policy enforcement, and network security operations.
-            I combine a detail-oriented investigation mindset with a strong network operations foundation and continuous
-            learning in cyber defense, threat hunting, PowerShell endpoint triage, CrowdStrike CQL, and Real Time Response.
+            Security+ and CCNA-certified Information Security Analyst with 3+ years of combined experience in
+            cybersecurity, network operations, and infrastructure support. Skilled in security monitoring, incident
+            investigation, endpoint security, and network security controls, with hands-on experience using enterprise
+            security solutions and supporting global IT operations.
           </p>
 
           <div class="btn-row">
@@ -454,10 +505,10 @@
       <div class="container">
         <h2>About</h2>
         <p class="section-intro">
-          I am an Information Security Analyst with a background in Network Operations Center engineering.
-          My work combines structured analysis, careful documentation, endpoint security investigation, user behavior review,
-          incident response coordination, and network security support. I enjoy learning deeply, building clear workflows,
-          and translating security findings into practical actions.
+          I am an Information Security Analyst with a strong foundation in network engineering, routing, switching,
+          firewall concepts, and global IT operations. My work combines structured alert triage, endpoint investigation,
+          user behavior review, incident response, security documentation, and coordination with IT, HR, infrastructure,
+          and network teams to turn security findings into practical response actions.
         </p>
 
         <div class="note">
@@ -477,22 +528,22 @@
         <div class="grid grid-2">
           <div class="card">
             <h3>Security Platforms</h3>
-            <p>CrowdStrike Falcon, Bitdefender GravityZone EDR, Armis Centrix, Armis VIPR Pro, Netskope SASE, Varonis Data Security, Halcyon Anti-Ransomware.</p>
+            <p>CrowdStrike Falcon, Bitdefender GravityZone, Armis Centrix, Netskope, Varonis, and Halcyon Anti-Ransomware.</p>
           </div>
 
           <div class="card">
             <h3>SOC / EDR Investigation</h3>
-            <p>Alert triage, incident validation, malware investigation, ransomware-related alert handling, defense evasion, Living-off-the-Land activity, suspicious process review, IOC validation.</p>
+            <p>Alert triage, incident response lifecycle, malware investigation, defense evasion, Living-off-the-Land activity, IOC validation, endpoint investigation, and recovery validation.</p>
           </div>
 
           <div class="card">
             <h3>Scripting and Querying</h3>
-            <p>PowerShell fundamentals, CrowdStrike Query Language basics, Bash basics, endpoint triage commands, SHA256 hash checking, certificate review, process review, event log checking.</p>
+            <p>PowerShell fundamentals, CrowdStrike Query Language basics, Real Time Response exposure, Bash basics, endpoint triage commands, hash validation, certificate review, process review, and event log checking.</p>
           </div>
 
           <div class="card">
             <h3>Threat Intelligence and OSINT</h3>
-            <p>VirusTotal, ANY.RUN, Shodan, Maltego, Whois, AbuseIPDB, PeeringDB, IOC enrichment, IP reputation review.</p>
+            <p>Cyber threat intelligence tools and sandboxes, including VirusTotal and ANY.RUN, plus Shodan, Maltego, Whois, AbuseIPDB, PeeringDB, IOC enrichment, and IP reputation review.</p>
           </div>
 
           <div class="card">
@@ -638,13 +689,16 @@
             <div class="job-title">Information Security Analyst</div>
             <div class="job-meta">Allegro Microsystems Philippines Inc. | March 2025 – Present</div>
             <ul>
-              <li>Own and execute the incident response lifecycle, including playbook creation and updates, alert identification, investigation, containment, eradication, recovery validation, documentation, and lessons learned.</li>
+              <li>Execute the incident response lifecycle, including playbook creation and updates, alert identification, investigation, containment, eradication, recovery validation, documentation, and lessons learned.</li>
               <li>Monitor, triage, and investigate alerts across endpoint, user behavior, network, data security, anti-ransomware, and AI-related security monitoring platforms.</li>
-              <li>Investigate incidents involving abnormal login activity, suspicious file access, privilege escalation attempts, malware indicators, ransomware-related alerts, defense evasion, Living-off-the-Land activity, AI-related policy alerts, and cybersecurity policy violations.</li>
+              <li>Investigate incidents involving malware, ransomware, defense evasion, Living-off-the-Land activity, abnormal user behavior, AI-related policy alerts, and cybersecurity policy violations.</li>
               <li>Perform endpoint and security alert validation by reviewing file hashes, digital certificates, suspicious processes, command-line activity, host context, user activity, and related security telemetry.</li>
               <li>Investigate acceptable use policy violations and risky user behavior; document findings and coordinate with HR, IT, and relevant stakeholders for awareness, escalation, and corrective action.</li>
-              <li>Create and maintain Armis dashboards to monitor suspicious, malicious, unmanaged, and high-risk asset activity for improved investigation visibility and response prioritization.</li>
+              <li>Create and maintain dashboards to monitor suspicious, malicious, unmanaged, and high-risk asset activity for improved investigation visibility and response prioritization.</li>
               <li>Support security operations projects, including backup enforcement, scheduled manual scanning for legacy systems, MDM initiatives, DNS allowlist/blocklist maintenance, approved security tool exclusions, and minor security policy adjustments.</li>
+              <li><strong>Achievement:</strong> Improved alert handling consistency by supporting incident response playbooks for investigations, escalation steps, and mitigation workflows.</li>
+              <li><strong>Achievement:</strong> Helped secure a production VLAN migration by validating segmentation, access controls, and policy compliance.</li>
+              <li><strong>Achievement:</strong> Strengthened investigation quality through consistent documentation of alert context, affected users or hosts, evidence, and recommended actions.</li>
             </ul>
           </div>
 
@@ -658,6 +712,7 @@
               <li>Documented incidents, performed root cause analysis, prepared reports, and supported escalation and resolution tracking.</li>
               <li>Coordinated with SOC and infrastructure teams on network security actions, including malicious IP blocking and port security enforcement.</li>
               <li>Assisted in switch proof-of-concept testing, traffic simulations, bandwidth analysis, and infrastructure performance validation.</li>
+              <li><strong>Achievement:</strong> Contributed to network hardening through port security and compliance measures.</li>
             </ul>
           </div>
 
@@ -707,6 +762,16 @@
       </div>
     </section>
 
+    <section id="education">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="card">
+          <h3>Bachelor of Science in Information Technology</h3>
+          <p>Polytechnic University of the Philippines, Santa Rosa, Laguna, Philippines</p>
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="container">
         <div class="contact-box">
@@ -725,7 +790,7 @@
 
   <footer>
     <div class="container">
-      © 2026 Janine Valerie Redoble. Analytical, bookish, technical, and security-focused.
+      &copy; 2026 Janine Valerie Redoble. Information Security Analyst | SOC Analyst | Network Security.
     </div>
   </footer>
 </body>
